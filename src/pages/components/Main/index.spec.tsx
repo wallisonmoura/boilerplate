@@ -4,12 +4,10 @@ import Main from '.'
 
 describe('<Main /', () => {
   it('render test', () => {
-    const { container } = render(<Main />)
+    render(<Main />)
 
     expect(
       screen.getByRole('heading', { name: /React avançado/i })
     ).toBeInTheDocument()
-
-    expect(container.firstChild).toMatchSnapshot()
   })
 })
