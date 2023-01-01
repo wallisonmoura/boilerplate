@@ -7,7 +7,7 @@ describe('<Main /', () => {
     render(<Main />)
 
     expect(
-      screen.getByRole('heading', { name: /React avançado/i })
+      screen.getByRole('heading', { name: /React com Nextjs/i })
     ).toBeInTheDocument()
   })
 
