@@ -4,11 +4,13 @@ import Main from '.'
 
 describe('<Main />', () => {
   it('render test', () => {
-    render(<Main />)
+    const { container } = render(<Main />)
 
     expect(
       screen.getByRole('heading', { name: /React com Nextjs/i })
     ).toBeInTheDocument()
+
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('render colors correctly', () => {
